@@ -1,0 +1,11 @@
+service: viewpointFinder
+
+frameworkVersion: "3"
+
+provider:
+    name: aws
+    runtime: nodejs14.x
+
+functions:
+    findViewpoints:
+        handler: ./build/awsHandler.findViewpoints

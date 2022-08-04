@@ -1,0 +1,28 @@
+{
+  "name": "xibix-coding-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "npx tsc",
+	"find-cli": "node ./build/cli.js './data/mesh.json' 20",
+	"find-cli-1000": "node ./build/cli.js './data/mesh_x_sin_cos_10000.json' 10000",
+	"find-cli-2000": "node ./build/cli.js './data/mesh_x_sin_cos_20000.json' 20000",
+	"find-serverless": "serverless invoke local -f findViewpoints -d '{\"filename\": \"./data/mesh.json\", \"numberOfViewpoints\": 23}'",
+	"find-serverless-1000": "serverless invoke local -f findViewpoints -d '{\"filename\": \"./data/mesh_x_sin_cos_10000.json\", \"numberOfViewpoints\": 23}'",
+	"find-serverless-2000": "serverless invoke local -f findViewpoints -d '{\"filename\": \"./data/mesh_x_sin_cos_20000.json\", \"numberOfViewpoints\": 23}'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.6.2",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "winston": "^3.8.1"
+  }
+}
